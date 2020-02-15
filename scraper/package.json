@@ -1,0 +1,10 @@
+{
+  "name": "xwing-prices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Guido Kessels <guidokessels@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "x-ray": "^2.3.4"
+  }
+}

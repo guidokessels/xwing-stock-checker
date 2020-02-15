@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Dragon's Lair",
+    "id": "DL",
+    "url": "https://www.dragonslair.se/product/star-wars-x-wing-2nd-ed/",
+    "selectors": {
+      "item": "#product-list .grid-item",
+      "itemName": ".label | whitespace | fixTitle",
+      "itemPrice": ".price | price | whitespace | toNum",
+      "itemUrl": "a.label@href",
+      "itemImage": "img@src",
+      "pagination": "a[rel=\"next\"]:first-child@href",
+      "stock": ".controls > .text-small | dlstock"
+    },
+    "file": "dl.json"
+  },
+  {
+    "name": "Alphaspel",
+    "id": "AS",
+    "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/",
+    "selectors": {
+      "item": ".products.row > div",
+      "itemName": ".product-name | whitespace | fixTitle",
+      "itemPrice": ".price |  price | whitespace | toNum",
+      "itemUrl": "a@href",
+      "itemImage": ".product-image-wrapper > img@src",
+      "pagination": ".next > a@href",
+      "stock": ".stock | whitespace | asstock"
+    },
+    "file": "as.json"
+  },
+  {
+    "name": "SF Bokhandeln",
+    "id": "SFBOK",
+    "url": "https://www.sfbok.se/stora-spelforlag/fantasy-flight-games/star-wars-x-wing-2nd-edition",
+    "selectors": {
+      "item": ".view-content > .views-row",
+      "itemName": "h2 > a | whitespace | fixTitle",
+      "itemPrice": ".price |  price | whitespace | toNum",
+      "itemUrl": "h2 > a@href",
+      "itemImage": ".image img@src",
+      "pagination": "",
+      "stock": ".field-name-field-produkt a | sfbstock"
+    },
+    "file": "sfbok.json"
+  },
+  {
+    "name": "World of Board Games",
+    "id": "WOB",
+    "url": "https://www.worldofboardgames.com/sallskapsspel/star_wars_x_wing_second_edition",
+    "selectors": {
+      "item": ".product",
+      "itemName": ".medium a@title | whitespace | fixTitle",
+      "itemPrice": ".xlarge >  strong |  price | whitespace | toNum",
+      "itemUrl": ".medium a@href",
+      "itemImage": "img@src",
+      "pagination": ".li48:nth-last-child(2) div:nth-child(3) a@href",
+      "stock": "a.button | wobstock"
+    },
+    "file": "wob.json"
+  }
+]
