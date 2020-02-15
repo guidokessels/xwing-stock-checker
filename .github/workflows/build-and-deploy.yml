@@ -25,14 +25,12 @@ jobs:
         working-directory: ${{env.working-directory}}
         run: yarn install
 
-      - name: Build
-        working-directory: ${{env.working-directory}}
-        run: yarn build
-
       - name: Scrape
         working-directory: ${{env.working-directory}}
         run: yarn scrape
+
   deploy:
+    needs: scrape
     runs-on: ubuntu-18.04
     env:
       working-directory: ./app
