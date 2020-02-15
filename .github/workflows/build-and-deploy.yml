@@ -1,0 +1,60 @@
+name: Build and Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Every 15 mins
+    - cron: "*/15 * * * *"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-18.04
+    env:
+      working-directory: ./scraper
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Install dependencies
+        working-directory: ${{env.working-directory}}
+        run: yarn install
+
+      - name: Build
+        working-directory: ${{env.working-directory}}
+        run: yarn build
+
+      - name: Scrape
+        working-directory: ${{env.working-directory}}
+        run: yarn scrape
+  deploy:
+    runs-on: ubuntu-18.04
+    env:
+      working-directory: ./app
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Install dependencies
+        working-directory: ${{env.working-directory}}
+        run: yarn install
+
+      - name: Build
+        working-directory: ${{env.working-directory}}
+        run: yarn build
+
+      - name: Deploy
+        working-directory: ${{env.working-directory}}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./build
