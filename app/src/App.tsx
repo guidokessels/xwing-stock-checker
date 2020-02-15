@@ -9,6 +9,7 @@ const App = () => {
         X-Wing Stock Checker
         <sup>⚡</sup>
       </h1>
+      <h6>Last update: {new Date(data.timestamp).toLocaleString("sv")}</h6>
       <table>
         <thead>
           <tr>

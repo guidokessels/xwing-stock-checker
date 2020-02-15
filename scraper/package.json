@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Guido Kessels <guidokessels@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "scrape": "node index.js"
+  },
   "dependencies": {
     "x-ray": "^2.3.4"
   }

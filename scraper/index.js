@@ -156,6 +156,7 @@ const run = async () => {
   console.log(`Found ${Object.keys(itemsById).length} unique items`);
 
   writeResultsToFile(SRC_FOLDER + "data.json", {
+    timestamp: Date.now(),
     stores: stores.reduce((acc, store) => {
       acc[store.id] = store;
       return acc;
