@@ -9,10 +9,11 @@ on:
     - cron: "*/15 * * * *"
 
 jobs:
-  scrape:
+  deploy:
     runs-on: ubuntu-18.04
     env:
-      working-directory: ./scraper
+      working-directory-scraper: ./scraper
+      working-directory-app: ./app
     steps:
       - uses: actions/checkout@v2
 
@@ -21,37 +22,24 @@ jobs:
         with:
           node-version: "12.x"
 
-      - name: Install dependencies
-        working-directory: ${{env.working-directory}}
+      - name: Install dependencies (Scraper)
+        working-directory: ${{env.working-directory-scraper}}
         run: yarn install
 
       - name: Scrape
-        working-directory: ${{env.working-directory}}
+        working-directory: ${{env.working-directory-scraper}}
         run: yarn scrape
 
-  deploy:
-    needs: scrape
-    runs-on: ubuntu-18.04
-    env:
-      working-directory: ./app
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-
-      - name: Install dependencies
-        working-directory: ${{env.working-directory}}
+      - name: Install dependencies (App)
+        working-directory: ${{env.working-directory-app}}
         run: yarn install
 
-      - name: Build
-        working-directory: ${{env.working-directory}}
+      - name: Build App
+        working-directory: ${{env.working-directory-app}}
         run: yarn build
 
-      - name: Deploy
+      - name: Deploy App
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ${{env.working-directory}}/build
+          publish_dir: ${{env.working-directory-app}}/build
