@@ -55,7 +55,7 @@
       "itemUrl": ".medium a@href",
       "itemImage": "img@src",
       "pagination": ".li48:nth-last-child(2) div:nth-child(3) a@href",
-      "stock": "a.button | wobstock"
+      "stock": "a.button.green | wobstock"
     },
     "file": "wob.json"
   }
