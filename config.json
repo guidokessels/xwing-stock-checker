@@ -58,5 +58,11 @@
       "stock": "a.button.green | wobstock"
     },
     "file": "wob.json"
+  },
+  {
+    "name": "Webhallen",
+    "id": "WEB",
+    "url": "https://www.webhallen.com/se/category/4667-Star-Wars-X-Wing-Miniatures-Game",
+    "file": "webhallen.json"
   }
 ]

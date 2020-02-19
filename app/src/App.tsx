@@ -27,52 +27,55 @@ const App = () => {
         <tbody>
           {Object.entries(data.itemsById)
             .sort(([keyA], [keyB]) => (keyA > keyB ? 1 : -1))
-            .map(([key, items]) => (
-              <tr key={key}>
-                <td>
-                  <a
-                    href={items.find(d => d && d.image)!.image}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={items.find(d => d && d.image)!.image}
-                      height="30"
-                    />
-                  </a>
-                </td>
-                <td>{items.find(d => d && d.name)!.name}</td>
-                {Object.entries(data.stores).map(([key, store], i) => {
-                  const item = items[i];
-
-                  if (!item) {
-                    return <td key={store.id}></td>;
-                  }
-                  return (
-                    <td
-                      key={item.store}
-                      className={item.stock ? "in-stock" : "out-of-stock"}
+            .map(([key, items = {}]) => {
+              const itemWithNameAndImage = Object.values(items).find(
+                p => p!.name && p!.image
+              );
+              return (
+                <tr key={key}>
+                  <td>
+                    <a
+                      href={itemWithNameAndImage!.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={
-                          `In Stock: ` +
-                          (typeof item.stock === "number"
-                            ? item.stock
-                            : item.stock
-                            ? "Yes"
-                            : "No")
-                        }
+                      <img src={itemWithNameAndImage!.image} height="30" />
+                    </a>
+                  </td>
+                  <td>{itemWithNameAndImage!.name}</td>
+                  {Object.entries(data.stores).map(([key, store], i) => {
+                    // @ts-ignore
+                    const item = items[store.id];
+
+                    if (!item) {
+                      return <td key={store.id}></td>;
+                    }
+                    return (
+                      <td
+                        key={item.store}
+                        className={item.stock ? "in-stock" : "out-of-stock"}
                       >
-                        {item.price} SEK
-                      </a>
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={
+                            `In Stock: ` +
+                            (typeof item.stock === "number"
+                              ? item.stock
+                              : item.stock
+                              ? "Yes"
+                              : "No")
+                          }
+                        >
+                          {item.price} SEK
+                        </a>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
         </tbody>
       </table>
     </>

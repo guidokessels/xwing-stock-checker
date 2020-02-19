@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "jsonfile": "^5.0.0",
+    "node-fetch": "^2.6.0",
     "x-ray": "^2.3.4"
   }
 }
