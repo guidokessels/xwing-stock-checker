@@ -30,7 +30,19 @@ thead th {
   border-bottom: 1px solid black;
 }
 
-tr:nth-child(2n) {
+th.column-name {
+  z-index: 3;
+  left: 0;
+}
+
+td.column-name {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 2;
+}
+
+tr:nth-child(2n) td {
   background-color: #f9f9f9;
 }
 
