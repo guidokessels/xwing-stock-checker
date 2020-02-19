@@ -23,6 +23,9 @@
     "eject": "react-scripts eject",
     "postbuild": "react-snap"
   },
+  "reactSnap": {
+    "removeScriptTags": true
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
