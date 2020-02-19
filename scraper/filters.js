@@ -42,11 +42,11 @@ module.exports = {
     value = value.replace(/ Squad$/, " Squadron Pack");
     value = value.replace("Wave 1 ", "");
 
-    value = value.trim();
-
     if (value.endsWith("Playmat")) {
-      value = "Playmat " + value.replace("Playmat", "");
+      value = "Playmat " + value.replace("Playmat", "").trim();
     }
+
+    value = value.trim();
 
     // DL has mistyped TIE/ln as TIE/In
     if (value === "TIE/In Fighter") {
