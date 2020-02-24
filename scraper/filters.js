@@ -57,6 +57,10 @@ module.exports = {
       value = value + " Squadron Pack";
     }
 
+    if (value.endsWith("ARC-170")) {
+      value = value + " Starfighter";
+    }
+
     if (value.endsWith("Playmat")) {
       value = "Playmat " + value.replace("Playmat", "").trim();
     }
