@@ -49,6 +49,7 @@ module.exports = {
     value = value.replace(/^X-Wing:/, "");
     value = value.replace("Scum & Villainy", "Scum And Villainy");
     value = value.replace("Scum and Villainy", "Scum And Villainy");
+    value = value.replace(/pre[ -]?order/i, "");
 
     if (
       value.endsWith("Servants of Strife") ||
