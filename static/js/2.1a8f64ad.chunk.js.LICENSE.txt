@@ -4,8 +4,6 @@ object-assign
 @license MIT
 */
 
-/*! https://mths.be/punycode v1.4.1 by @mathias */
-
 /** @license React v0.18.0
  * scheduler.production.min.js
  *
