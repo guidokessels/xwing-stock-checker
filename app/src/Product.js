@@ -27,11 +27,12 @@ export const Product = props => {
 
   const { name, image } = items.find(p => p.name && p.image);
   const sortedByPriceAndStock = items.sort((a, b) => {
-    if (a.price !== b.price) {
+    if (a.stock && b.stock && a.price !== b.price) {
       return a.price - b.price;
     } else if (a.stock !== b.stock) {
-      return a.stock > b.stock ? -1 : 1;
+      return b.stock - a.stock;
     }
+    return 0;
   });
 
   return (
