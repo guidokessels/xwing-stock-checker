@@ -74,7 +74,7 @@ const App = () => {
                               : "No")
                           }
                         >
-                          {item.price} SEK
+                          {item.price || `???`} SEK
                         </a>
                       </td>
                     );

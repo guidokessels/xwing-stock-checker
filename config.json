@@ -45,6 +45,21 @@
     "file": "sfbok.json"
   },
   {
+    "name": "Escapade",
+    "id": "ESC",
+    "url": "https://www.escapadegaminggear.com/figurspel/x-wing-miniatures-game",
+    "selectors": {
+      "item": ".product",
+      "itemName": ".widget-text a@title | whitespace | fixTitle",
+      "itemPrice": ".amount |  price | whitespace | toNum",
+      "itemUrl": "a@href",
+      "itemImage": ".product-images img@src",
+      "pagination": ".nope",
+      "stock": ".amount | whitespace | escapadestock"
+    },
+    "file": "escapade.json"
+  },
+  {
     "name": "World of Board Games",
     "id": "WOB",
     "url": "https://www.worldofboardgames.com/sallskapsspel/star_wars_x_wing_second_edition",

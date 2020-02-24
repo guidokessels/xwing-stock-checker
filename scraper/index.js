@@ -16,6 +16,9 @@ const writeResultsToFile = (file, results) =>
 function filterItems(item) {
   return (
     !item.name.startsWith("GF9 ") &&
+    !item.name.startsWith("Grips") &&
+    !item.name.includes("(1st Ed)") &&
+    !item.name.includes("different colours") &&
     // !item.name.includes("1st Edition") &&
     !item.name.includes("för dig som köper Core Set i vår butik")
   );

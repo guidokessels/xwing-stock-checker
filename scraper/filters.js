@@ -9,11 +9,14 @@ module.exports = {
   dlstock: value => value === "Ja",
   sfbstock: value => value === "Köp",
   wobstock: value => value === "K�p",
+  escapadestock: value => value !== "Slutsåld",
   asstock: value => parseInt(value, 10) || 0,
   fixTitle: value => {
     const original = value;
 
     // Look at all the things! Hack hack hackety hack
+    value = value.replace("X-Wing 2nd Edition:", "");
+    value = value.replace("X-Wing (2nd Ed):", "");
     value = value.replace("Star Wars: X-Wing (Second Edition) -", "");
     value = value.replace("Star Wars: X-Wing Miniatures Game -", "");
     value = value.replace("Star Wars: X-Wing Second Edition -", "");
@@ -28,6 +31,7 @@ module.exports = {
     value = value.replace("Star Wars: X-Wing", "");
     value = value.replace("Expansion Pack", "");
     value = value.replace(/Expansion/i, "");
+    value = value.replace("Exp.", "");
     value = value.replace("(2nd ed)", "");
     value = value.replace("2nd Ed -", "");
     value = value.replace("(1st ed)", "(1st Edition)");
@@ -41,10 +45,26 @@ module.exports = {
     value = value.replace(" Class", "-Class");
     value = value.replace(/ Squad$/, " Squadron Pack");
     value = value.replace("Wave 1 ", "");
+    value = value.replace("Conv. Kit", "Conversion Kit");
+    value = value.replace(/^X-Wing:/, "");
+    value = value.replace("Scum & Villainy", "Scum And Villainy");
+    value = value.replace("Scum and Villainy", "Scum And Villainy");
+
+    if (
+      value.endsWith("Servants of Strife") ||
+      value.endsWith("Guardians of the Republic")
+    ) {
+      value = value + " Squadron Pack";
+    }
 
     if (value.endsWith("Playmat")) {
       value = "Playmat " + value.replace("Playmat", "").trim();
     }
+
+    if (value.startsWith("X-Wing Deluxe ")) {
+      value = value.replace("X-Wing ", "");
+    }
+    value = value.replace("Tools & Range Ruler", "Tools and Range Ruler");
 
     value = value.trim();
 
@@ -53,12 +73,17 @@ module.exports = {
       return "TIE/ln Fighter";
     }
 
+    if (original === "X-Wing Dice Pack") {
+      return "Dice Pack (1st Edition)";
+    }
+
     if (
       original === "Star Wars: X-Wing Second Edition" ||
       value === "2nd Core Set" ||
       value === "Core Set" ||
       original === "Star Wars: X-Wing (Second Edition)" ||
-      value === "Core Set 2018"
+      value === "Core Set 2018" ||
+      original === "X-Wing 2nd Edition Core Set"
     ) {
       return "Core Set (2nd Edition)";
     }
