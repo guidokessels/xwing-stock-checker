@@ -80,6 +80,11 @@ a:visited {
   text-decoration: none;
 }
 
+td,
+th {
+  padding: 0 10px;
+}
+
 .column-stock {
   /* border-right: 1px dashed rgb(238, 237, 237); */
   /* text-align: center; */
@@ -101,6 +106,10 @@ a:visited {
   content: "🔴";
 }
 
+.backToOverview {
+  margin: 5px;
+}
+
 @media screen and (max-width: 992px) {
   body {
     /* font-size: 0.9em; */
@@ -109,7 +118,7 @@ a:visited {
     display: none;
   }
   .column-name {
-    max-width: 200px;
+    max-width: 250px;
     text-overflow: ellipsis;
     overflow: hidden;
   }

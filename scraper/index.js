@@ -72,12 +72,12 @@ const run = async () => {
   }, []);
 
   const itemsById = allItems.reduce((map, item) => {
-    const id = item.name.toLowerCase();
+    const id = item.name.toLowerCase().replace(/[\W_]+/g, "-");
 
     if (!map[id]) {
-      map[id] = {};
+      map[id] = [];
     }
-    map[id][item.store] = item;
+    map[id].push(item);
 
     return map;
   }, {});
