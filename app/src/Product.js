@@ -1,11 +1,17 @@
 import React from "react";
 import data from "./data.json";
 
-export const Product = ({ id }) => {
+export const Product = props => {
+  const {
+    route: {
+      params: { id }
+    }
+  } = props;
+
   const items = data.itemsById[id] || [];
 
   const BackToOverview = (
-    <a className="backToOverview" href="/">
+    <a className="backToOverview" href="#/">
       Back to Overview
     </a>
   );

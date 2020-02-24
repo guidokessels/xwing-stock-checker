@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import data from "./data.json";
-import { Router } from "./router";
+import { Routes } from "./router";
 
 const App = () => {
   return (
-    <>
+    <div className="container">
       <h1>
         X-Wing Stock Checker
         <sup>⚡</sup>
@@ -15,8 +15,8 @@ const App = () => {
         <br />
         Last update: {new Date(data.timestamp).toLocaleString("sv")}
       </div>
-      <Router />
-    </>
+      <Routes />
+    </div>
   );
 };
 

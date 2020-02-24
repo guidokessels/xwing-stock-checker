@@ -37,7 +37,7 @@ const scrapeWebhallen = async storeConfig => {
     const product = {
       name: filters.whitespace(filters.fixTitle(p.name)),
       price: filters.toNum(filters.price(p.price.price)),
-      image: "http://www.foo.bar",
+      image: null,
       url: `https://www.webhallen.com/se/product/${p.id}`,
       stock: Object.entries(p.stock)
         .filter(

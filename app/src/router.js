@@ -1,18 +1,16 @@
 import React from "react";
-import { useRoutes } from "hookrouter";
+import { RouterView, Route, RouteFallback } from "peppermint-router";
 
 // Pages
 import { Overview } from "./Overview";
 import { Product } from "./Product";
 
-// Routes config
-const routes = {
-  "/": () => <Overview />,
-  "/product/:id": ({ id }) => <Product id={id} />
-};
-
-export const Router = () => {
-  const routeResult = useRoutes(routes);
-
-  return routeResult || <Overview />;
+export const Routes = () => {
+  return (
+    <RouterView>
+      <Route path="#/" component={Overview} />
+      <Route path="#/product/:id" component={Product} />
+      <RouteFallback component={Overview} />
+    </RouterView>
+  );
 };

@@ -33,7 +33,7 @@ export const Overview = () => {
                   </a>
                 </td>
                 <td className="column-name">
-                  <a href={`/product/${key}`}>{itemWithNameAndImage.name}</a>
+                  <a href={`#/product/${key}`}>{itemWithNameAndImage.name}</a>
                 </td>
                 <td
                   className={
