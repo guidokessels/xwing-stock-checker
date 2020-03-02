@@ -6,7 +6,10 @@ module.exports = {
     return value.replace(/(sek|kr)/, "");
   },
   toNum: value => parseInt(value),
-  dlstock: value => value === "Ja",
+  dlstock: value => {
+    const matches = value.match(/\d+/g);
+    return matches.reduce((a, b) => a + parseInt(b, 10), 0);
+  },
   sfbstock: value => value === "Köp",
   wobstock: value => value === "K�p",
   escapadestock: value => value !== "Slutsåld",

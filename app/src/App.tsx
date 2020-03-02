@@ -11,7 +11,7 @@ const App = () => {
         <sup>⚡</sup>
       </h1>
       <div className="update-notice">
-        Updated every 15 minutes.
+        Updated every hour.
         <br />
         Last update: {new Date(data.timestamp).toLocaleString("sv")}
       </div>

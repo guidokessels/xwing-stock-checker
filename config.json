@@ -3,14 +3,15 @@
     "name": "Dragon's Lair",
     "id": "DL",
     "url": "https://www.dragonslair.se/product/star-wars-x-wing-2nd-ed/",
+    "openProductPage": true,
     "selectors": {
       "item": "#product-list .grid-item",
-      "itemName": ".label | whitespace | fixTitle",
-      "itemPrice": ".price | price | whitespace | toNum",
+      "itemName": "span[itemprop=\"name\"] | whitespace | fixTitle",
+      "itemPrice": "meta[itemprop=\"price\"]@content | price | whitespace | toNum",
       "itemUrl": "a.label@href",
-      "itemImage": "img@src",
+      "itemImage": "img[itemprop=\"image\"]@src",
       "pagination": "a[rel=\"next\"]:first-child@href",
-      "stock": ".controls > .text-small | dlstock"
+      "stock": "a[name=\"stock\"] ~ .specs | dlstock"
     },
     "file": "dl.json"
   },
@@ -48,10 +49,11 @@
     "name": "Escapade",
     "id": "ESC",
     "url": "https://www.escapadegaminggear.com/figurspel/x-wing-miniatures-game",
+    "openProductPage": true,
     "selectors": {
       "item": ".product",
-      "itemName": ".widget-text a@title | whitespace | fixTitle",
-      "itemPrice": ".amount |  price | whitespace | toNum",
+      "itemName": "[itemprop=\"name\"] | whitespace | fixTitle",
+      "itemPrice": "[itemprop=\"price\"]@content |  price | whitespace | toNum",
       "itemUrl": "a@href",
       "itemImage": ".product-images img@src",
       "pagination": ".nope",

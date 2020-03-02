@@ -72,6 +72,11 @@ th {
   white-space: nowrap;
 }
 
+.product-image img {
+  max-width: 30%;
+  min-width: 200px;
+}
+
 .column-image {
   text-align: left;
 }
@@ -94,18 +99,25 @@ th {
 }
 
 .column-stock:after {
-  font-size: 8px;
-  padding: 0 0 0 4px;
+  margin-left: 4px;
+  width: 8px;
+  height: 8px;
+  content: " ";
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid;
 }
 
 .in-stock:after {
-  /* background-color: forestgreen; */
-  content: "🟢";
+  background-color: forestgreen;
+  border-color: darkgreen;
+  /* content: "🟢"; */
 }
 
 .out-of-stock:after {
-  /* background-color: crimson; */
-  content: "🔴";
+  background-color: crimson;
+  border-color: darkred;
+  /* content: "🔴"; */
 }
 
 .backToOverview {

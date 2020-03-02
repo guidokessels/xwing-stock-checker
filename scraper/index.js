@@ -31,21 +31,47 @@ const run = async () => {
       console.log(`Scraping ${store.name}...`);
 
       let currentPageUrl = "";
-      const response = await x(store.url, store.selectors.item, [
-        {
-          name: store.selectors.itemName,
-          price: store.selectors.itemPrice,
-          image: store.selectors.itemImage,
-          url: store.selectors.itemUrl,
-          stock: store.selectors.stock
-        }
-      ])
+
+      let promise;
+
+      if (!store.openProductPage) {
+        promise = x(store.url, store.selectors.item, [
+          {
+            name: store.selectors.itemName,
+            price: store.selectors.itemPrice,
+            image: store.selectors.itemImage,
+            url: store.selectors.itemUrl,
+            stock: store.selectors.stock
+          }
+        ]);
+      } else {
+        promise = x(store.url, store.selectors.item, [
+          {
+            url: store.selectors.itemUrl
+          }
+        ]);
+      }
+
+      let response = await promise
         .paginate(store.selectors.pagination)
         .abort((_result, nextPageUrl) => {
           const shouldAbort = currentPageUrl === nextPageUrl;
           currentPageUrl = nextPageUrl;
           return shouldAbort;
         });
+
+      if (store.openProductPage) {
+        response = await Promise.all(
+          response.map(({ url }) => {
+            return x(url, {
+              name: store.selectors.itemName,
+              price: store.selectors.itemPrice,
+              image: store.selectors.itemImage,
+              stock: store.selectors.stock
+            }).then(r => ({ ...r, url }));
+          }, [])
+        );
+      }
 
       console.log(`Found ${response.length} products for ${store.name}`);
 
