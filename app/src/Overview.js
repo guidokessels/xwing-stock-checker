@@ -8,7 +8,7 @@ export const Overview = () => {
         <tr>
           <th className="column-image"></th>
           <th className="column-name">Product</th>
-          <th>Stock</th>
+          <th className="column-stock">Stock</th>
         </tr>
       </thead>
       <tbody>

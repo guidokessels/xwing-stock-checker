@@ -22,7 +22,7 @@ sup {
 
 table {
   width: 100%;
-  /* max-width: 700px; */
+  table-layout: fixed;
 }
 
 .update-notice {
@@ -78,12 +78,12 @@ th {
 }
 
 .column-image {
-  text-align: left;
+  text-align: center;
+  width: 50px;
 }
 
 a,
 a:visited {
-  /* color: blue; */
   text-decoration: none;
 }
 
@@ -93,12 +93,10 @@ th {
 }
 
 .column-stock {
-  /* border-right: 1px dashed rgb(238, 237, 237); */
-  /* text-align: center; */
-  /* padding-right: 4px; */
+  width: 105px;
 }
 
-.column-stock:after {
+td.column-stock:after {
   margin-left: 4px;
   width: 8px;
   height: 8px;
@@ -111,13 +109,11 @@ th {
 .in-stock:after {
   background-color: forestgreen;
   border-color: darkgreen;
-  /* content: "🟢"; */
 }
 
 .out-of-stock:after {
   background-color: crimson;
   border-color: darkred;
-  /* content: "🔴"; */
 }
 
 .backToOverview {
@@ -133,7 +129,6 @@ th {
     display: none;
   }
   .column-name {
-    /* max-width: 250px; */
     text-overflow: ellipsis;
     overflow: hidden;
   }
