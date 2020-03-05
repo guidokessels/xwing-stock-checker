@@ -46,6 +46,7 @@ module.exports = {
     value = value.replace("2nd Ed -", "");
     value = value.replace("(1st ed)", "(1st Edition)");
     value = value.replace("’", "'");
+    value = value.replace("(Skrymmande)", "");
     value = value.replace("Maneuver Dials", "Maneuver Dial Upgrade Kit");
     value = value.replace(/Maneuver Dial$/, "Maneuver Dial Upgrade Kit");
     value = value.replace("3x3 ~ 91,5x91,5cm (Mousepad)", "");
