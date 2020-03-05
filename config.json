@@ -19,14 +19,16 @@
     "name": "Alphaspel",
     "id": "AS",
     "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/",
+    "openProductPage": true,
     "selectors": {
       "item": ".products.row > div",
-      "itemName": ".product-name | whitespace | fixTitle",
+      "itemName": "h3 | whitespace | fixTitle",
       "itemPrice": ".price |  price | whitespace | toNum",
       "itemUrl": "a@href",
-      "itemImage": ".product-image-wrapper > img@src",
+      "itemImage": ".product-image-wrapper img@src",
       "pagination": ".next > a@href",
-      "stock": ".stock | whitespace | asstock"
+      "stock": ".quantity | whitespace | asstock",
+      "sku": ".reference | sku"
     },
     "file": "as.json"
   },

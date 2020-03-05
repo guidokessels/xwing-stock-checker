@@ -14,6 +14,13 @@ module.exports = {
   wobstock: value => value === "K�p",
   escapadestock: value => value !== "Slutsåld",
   asstock: value => parseInt(value, 10) || 0,
+  sku: value => {
+    const matches = value.match(/SW[X|Z]\d+/);
+    if (matches) {
+      return matches[0];
+    }
+    return null;
+  },
   fixTitle: value => {
     const original = value;
 

@@ -14,6 +14,8 @@ const App = () => {
         Updated every hour.
         <br />
         Last update: {new Date(data.timestamp).toLocaleString("sv")}
+        <br />
+        <em>Please support your local game store</em>
       </div>
       <Routes />
     </div>

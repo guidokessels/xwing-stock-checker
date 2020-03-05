@@ -15,7 +15,8 @@ export const Overview = () => {
         {Object.entries(data.itemsById)
           .sort(([keyA], [keyB]) => (keyA > keyB ? 1 : -1))
           .map(([key, items = []]) => {
-            const itemWithNameAndImage = items.find(p => p.name && p.image);
+            const itemWithNameAndImage =
+              items.find(p => p.name && p.image) || {};
             const storesWithStock = items
               .sort((a, b) => (a.price || 0) - (b.price || 0))
               .filter(i => i.stock);
@@ -42,38 +43,6 @@ export const Overview = () => {
                 >
                   {!isInStock ? "Out of stock" : `${item.price || `???`} SEK`}
                 </td>
-                {/* {Object.entries(data.stores).map(([key, store], i) => {
-                // @ts-ignore
-                const item = items[store.id];
-
-                if (!item) {
-                  return <td key={store.id} className="column-stock"></td>;
-                }
-                return (
-                  <td
-                    key={item.store}
-                    className={`column-stock ${
-                      item.stock ? "in-stock" : "out-of-stock"
-                    }`}
-                  >
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={
-                        `In Stock: ` +
-                        (typeof item.stock === "number"
-                          ? item.stock
-                          : item.stock
-                          ? "Yes"
-                          : "No")
-                      }
-                    >
-                      {item.price || `???`} SEK
-                    </a>
-                  </td>
-                );
-              })} */}
               </tr>
             );
           })}
