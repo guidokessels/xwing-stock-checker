@@ -41,7 +41,7 @@ export const Overview = () => {
                     "column-stock " + (isInStock ? "in-stock" : "out-of-stock")
                   }
                 >
-                  {!isInStock ? "Out of stock" : `${item.price || `???`} SEK`}
+                  {!isInStock ? "Out of stock" : `${item.price || `???`} kr`}
                 </td>
               </tr>
             );

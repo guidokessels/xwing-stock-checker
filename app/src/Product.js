@@ -83,7 +83,7 @@ export const Product = props => {
                       : "Yes"
                     : 0}
                 </td>
-                <td>{item.price || "???"} SEK</td>
+                <td>{item.price || "???"} kr</td>
               </tr>
             );
           })}
