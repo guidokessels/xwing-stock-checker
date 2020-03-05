@@ -89,6 +89,8 @@ export const Product = props => {
           })}
         </tbody>
       </table>
+      <br />
+      {BackToOverview}
     </div>
   );
 };
