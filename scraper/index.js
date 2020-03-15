@@ -8,7 +8,7 @@ const { scrapeWebhallen } = require("./webhallen");
 const DATA_FOLDER = __dirname + "/../data/";
 const SRC_FOLDER = __dirname + "/../app/src/";
 
-const x = new Xray({ filters });
+const x = new Xray({ filters }).throttle(5, 100);
 
 const writeResultsToFile = (file, results) =>
   jsonfile.writeFile(file, results, { spaces: 2 });
