@@ -59,7 +59,7 @@
       "itemUrl": "a@href",
       "itemImage": ".product-images img@src",
       "pagination": ".nope",
-      "stock": ".amount | whitespace | escapadestock"
+      "stock": ".product-stock-box | whitespace | escapadestock"
     },
     "file": "escapade.json"
   },

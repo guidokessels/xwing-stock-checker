@@ -12,7 +12,7 @@ module.exports = {
   },
   sfbstock: value => value === "Köp",
   wobstock: value => value === "K�p",
-  escapadestock: value => value !== "Slutsåld",
+  escapadestock: value => value === "I lager",
   asstock: value => parseInt(value, 10) || 0,
   sku: value => {
     const matches = value.match(/SW[X|Z]\d+/);
