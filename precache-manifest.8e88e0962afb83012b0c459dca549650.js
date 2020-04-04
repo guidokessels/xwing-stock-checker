@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "539f6421e69798efe70e65d2e5df61c8",
+    "revision": "409e1dc1a3a21d4fc9266e64792d318a",
     "url": "/xwing-stock-checker/index.html"
   },
   {
-    "revision": "d8bb3bbc222ae11610a6",
+    "revision": "e0ed4df0dc82ae51989d",
     "url": "/xwing-stock-checker/static/css/main.6e2961aa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xwing-stock-checker/static/js/2.1a8f64ad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8bb3bbc222ae11610a6",
-    "url": "/xwing-stock-checker/static/js/main.a200594a.chunk.js"
+    "revision": "e0ed4df0dc82ae51989d",
+    "url": "/xwing-stock-checker/static/js/main.be1fe135.chunk.js"
   },
   {
     "revision": "af01f38608f393ecff4e",
