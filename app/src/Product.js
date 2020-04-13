@@ -39,7 +39,7 @@ export const Product = (props) => {
       {BackToOverview}
       {image && (
         <div className="product-image">
-          <img src={image} alt={name} title={name} />
+          <img src={image} alt={name} title={name} loading="lazy" />
         </div>
       )}
       <h2 className="product-name">{name}</h2>

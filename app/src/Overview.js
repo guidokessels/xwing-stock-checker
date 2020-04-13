@@ -1,7 +1,30 @@
-import React from "react";
-import data from "./data.json";
+import React, { useState, useEffect } from "react";
 
 export const Overview = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      import(/* webpackChunkName: "product-data" */ "./data.json").then(
+        (json) => {
+          setData(json);
+        },
+        () => {
+          setError("Could not load data");
+        }
+      );
+    }, 3500);
+  }, []);
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <table>
       <thead>
@@ -24,7 +47,13 @@ export const Overview = () => {
               <tr key={key}>
                 <td className="column-image">
                   <a href={image} target="_blank" rel="noopener noreferrer">
-                    <img src={image} alt={name} title={name} height="30" />
+                    <img
+                      loading="lazy"
+                      src={image}
+                      alt={name}
+                      title={name}
+                      height="30"
+                    />
                   </a>
                 </td>
                 <td className="column-name">
