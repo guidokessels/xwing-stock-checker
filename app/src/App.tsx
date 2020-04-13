@@ -20,6 +20,18 @@ const App = () => {
         <em>Please support your local game store</em>
       </div>
       <Routes />
+      <footer>
+        <a
+          href="https://github.com/guidokessels/xwing-stock-checker/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Report a bug{" "}
+          <span role="img" aria-hidden>
+            🐛
+          </span>
+        </a>
+      </footer>
     </div>
   );
 };

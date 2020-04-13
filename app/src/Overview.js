@@ -14,10 +14,8 @@ export const Overview = () => {
       <tbody>
         {Object.entries(data.itemsById)
           .sort(([keyA], [keyB]) => (keyA > keyB ? 1 : -1))
-          .map(([key, items = []]) => {
-            const itemWithNameAndImage =
-              items.find((p) => p.name && p.image) || {};
-            const storesWithStock = items
+          .map(([key, { name, image, stores = [] }]) => {
+            const storesWithStock = stores
               .sort((a, b) => (a.price || 0) - (b.price || 0))
               .filter((i) => i.stock);
             const isInStock = storesWithStock.length > 0;
@@ -25,21 +23,12 @@ export const Overview = () => {
             return (
               <tr key={key}>
                 <td className="column-image">
-                  <a
-                    href={itemWithNameAndImage.image}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={itemWithNameAndImage.image}
-                      alt={itemWithNameAndImage.name}
-                      title={itemWithNameAndImage.name}
-                      height="30"
-                    />
+                  <a href={image} target="_blank" rel="noopener noreferrer">
+                    <img src={image} alt={name} title={name} height="30" />
                   </a>
                 </td>
                 <td className="column-name">
-                  <a href={`#/product/${key}`}>{itemWithNameAndImage.name}</a>
+                  <a href={`#/product/${key}`}>{name}</a>
                 </td>
                 <td
                   className={

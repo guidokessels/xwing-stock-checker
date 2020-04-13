@@ -8,25 +8,24 @@ export const Product = (props) => {
     },
   } = props;
 
-  const items = data.itemsById[id] || [];
+  const { name, image, stores = [] } = data.itemsById[id] || {};
 
   const BackToOverview = (
     <a className="backToOverview" href="#/">
-      Back to Overview
+      &laquo; Back to Overview
     </a>
   );
 
-  if (!items.length) {
+  if (!stores.length || !name) {
     return (
       <>
         {BackToOverview}
-        <div>Could not find product</div>
+        <p>Could not find product</p>
       </>
     );
   }
 
-  const { name, image } = items.find((p) => p.name && p.image);
-  const sortedByPriceAndStock = items.sort((a, b) => {
+  const sortedByPriceAndStock = stores.sort((a, b) => {
     if (a.stock && b.stock && a.price !== b.price) {
       return a.price - b.price;
     } else if (a.stock !== b.stock) {
@@ -38,9 +37,11 @@ export const Product = (props) => {
   return (
     <div>
       {BackToOverview}
-      <div className="product-image">
-        <img src={image} alt={name} title={name} />
-      </div>
+      {image && (
+        <div className="product-image">
+          <img src={image} alt={name} title={name} />
+        </div>
+      )}
       <h2 className="product-name">{name}</h2>
       <table>
         <thead>

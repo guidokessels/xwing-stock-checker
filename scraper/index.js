@@ -109,13 +109,21 @@ const run = async () => {
     return products.concat(store.items);
   }, []);
 
-  const itemsById = allItems.reduce((map, item) => {
-    const id = item.name.toLowerCase().replace(/[\W_]+/g, "-");
+  const itemsById = allItems.reduce((map, { name, image, ...rest }) => {
+    const id = name.toLowerCase().replace(/[\W_]+/g, "-");
 
     if (!map[id]) {
-      map[id] = [];
+      map[id] = {
+        stores: [],
+      };
     }
-    map[id].push(item);
+    if (!map[id].name) {
+      map[id].name = name;
+    }
+    if (!map[id].image) {
+      map[id].image = image;
+    }
+    map[id].stores.push(rest);
 
     return map;
   }, {});
@@ -125,7 +133,8 @@ const run = async () => {
   writeResultsToFile(SRC_FOLDER + "data.json", {
     // timestamp: Date.now(),
     stores: stores.reduce((storesById, store) => {
-      storesById[store.id] = store;
+      const { name, id, url } = store;
+      storesById[store.id] = { name, id, url };
       return storesById;
     }, {}),
     itemsById,
