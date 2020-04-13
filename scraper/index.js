@@ -27,7 +27,7 @@ function filterItems(item) {
 
 const run = async () => {
   const results = stores
-    .filter(s => s.selectors)
+    .filter((s) => s.selectors)
     .map(async (store, i) => {
       console.log(`Scraping ${store.name}...`);
 
@@ -43,14 +43,14 @@ const run = async () => {
               image: store.selectors.itemImage,
               url: store.selectors.itemUrl,
               stock: store.selectors.stock,
-              sku: store.selectors.sku
-            }
+              sku: store.selectors.sku,
+            },
           ]);
         } else {
           promise = x(store.url, store.selectors.item, [
             {
-              url: store.selectors.itemUrl
-            }
+              url: store.selectors.itemUrl,
+            },
           ]);
         }
 
@@ -70,8 +70,8 @@ const run = async () => {
                 price: store.selectors.itemPrice,
                 image: store.selectors.itemImage,
                 stock: store.selectors.stock,
-                sku: store.selectors.sku
-              }).then(r => ({ ...r, url }));
+                sku: store.selectors.sku,
+              }).then((r) => ({ ...r, url }));
             }, [])
           );
         }
@@ -80,10 +80,10 @@ const run = async () => {
 
         const result = {
           ...store,
-          items: response.filter(filterItems).map(product => ({
+          items: response.filter(filterItems).map((product) => ({
             ...product,
-            store: store.id
-          }))
+            store: store.id,
+          })),
         };
 
         return writeResultsToFile(DATA_FOLDER + store.file, result).then(
@@ -99,7 +99,7 @@ const run = async () => {
       }
     });
 
-  results.push(scrapeWebhallen(stores.find(s => s.name === "Webhallen")));
+  results.push(scrapeWebhallen(stores.find((s) => s.name === "Webhallen")));
 
   const allResults = await Promise.all(results);
 
@@ -123,12 +123,12 @@ const run = async () => {
   console.log(`Found ${Object.keys(itemsById).length} unique items`);
 
   writeResultsToFile(SRC_FOLDER + "data.json", {
-    timestamp: Date.now(),
+    // timestamp: Date.now(),
     stores: stores.reduce((storesById, store) => {
       storesById[store.id] = store;
       return storesById;
     }, {}),
-    itemsById
+    itemsById,
   });
 
   console.log("All done!");
