@@ -15,9 +15,10 @@ body {
   margin: 0 auto;
 }
 
-sup {
+.spark {
   font-variant: small-caps;
   font-size: 14px;
+  vertical-align: super;
 }
 
 table {
@@ -122,9 +123,9 @@ td.column-stock:after {
 }
 
 @media screen and (max-width: 760px) {
-  body {
-    /* font-size: 0.9em; */
-  }
+  /* body {
+    font-size: 0.9em;
+  } */
   .column-image {
     display: none;
   }

@@ -16,10 +16,10 @@ export const Overview = () => {
           .sort(([keyA], [keyB]) => (keyA > keyB ? 1 : -1))
           .map(([key, items = []]) => {
             const itemWithNameAndImage =
-              items.find(p => p.name && p.image) || {};
+              items.find((p) => p.name && p.image) || {};
             const storesWithStock = items
               .sort((a, b) => (a.price || 0) - (b.price || 0))
-              .filter(i => i.stock);
+              .filter((i) => i.stock);
             const isInStock = storesWithStock.length > 0;
             const item = storesWithStock[0];
             return (
@@ -30,7 +30,12 @@ export const Overview = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={itemWithNameAndImage.image} height="30" />
+                    <img
+                      src={itemWithNameAndImage.image}
+                      alt={itemWithNameAndImage.name}
+                      title={itemWithNameAndImage.name}
+                      height="30"
+                    />
                   </a>
                 </td>
                 <td className="column-name">

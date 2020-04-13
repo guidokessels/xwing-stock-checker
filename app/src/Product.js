@@ -1,11 +1,11 @@
 import React from "react";
 import data from "./data.json";
 
-export const Product = props => {
+export const Product = (props) => {
   const {
     route: {
-      params: { id }
-    }
+      params: { id },
+    },
   } = props;
 
   const items = data.itemsById[id] || [];
@@ -25,7 +25,7 @@ export const Product = props => {
     );
   }
 
-  const { name, image } = items.find(p => p.name && p.image);
+  const { name, image } = items.find((p) => p.name && p.image);
   const sortedByPriceAndStock = items.sort((a, b) => {
     if (a.stock && b.stock && a.price !== b.price) {
       return a.price - b.price;
@@ -39,7 +39,7 @@ export const Product = props => {
     <div>
       {BackToOverview}
       <div className="product-image">
-        <img src={image} title={name} />
+        <img src={image} alt={name} title={name} />
       </div>
       <h2 className="product-name">{name}</h2>
       <table>
@@ -51,7 +51,7 @@ export const Product = props => {
           </tr>
         </thead>
         <tbody>
-          {sortedByPriceAndStock.map(item => {
+          {sortedByPriceAndStock.map((item) => {
             const store = data.stores[item.store];
             return (
               <tr key={store.id}>

@@ -8,7 +8,9 @@ const App = () => {
     <div className="container">
       <h1>
         X-Wing Stock Checker
-        <sup>⚡</sup>
+        <span className="spark" role="img" aria-hidden>
+          ⚡
+        </span>
       </h1>
       <div className="update-notice">
         Updated every hour.
