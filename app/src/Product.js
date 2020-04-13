@@ -1,5 +1,5 @@
 import React from "react";
-import data from "./data.json";
+import { useData } from "./useData";
 
 export const Product = (props) => {
   const {
@@ -7,6 +7,16 @@ export const Product = (props) => {
       params: { id },
     },
   } = props;
+
+  const { data, error } = useData();
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  if (!data) {
+    return <p>Loading...</p>;
+  }
 
   const { name, image, stores = [] } = data.itemsById[id] || {};
 

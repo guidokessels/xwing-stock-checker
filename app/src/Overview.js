@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useData } from "./useData";
 
 export const Overview = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-      import(/* webpackChunkName: "product-data" */ "./data.json").then(
-        (json) => {
-          setData(json);
-        },
-        () => {
-          setError("Could not load data");
-        }
-      );
-    }, 3500);
-  }, []);
+  const { data, error } = useData();
 
   if (error) {
     return <p>{error}</p>;
