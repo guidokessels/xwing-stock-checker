@@ -1,5 +1,5 @@
 {
-  "name": "xwing-prices",
+  "name": "scraper",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Guido Kessels <guidokessels@gmail.com>",
