@@ -1,16 +1,20 @@
-const Xray = require("x-ray");
-const jsonfile = require("jsonfile");
-const stores = require("../config.json");
-const filters = require("./filters");
+import jsonfile from "jsonfile";
+import Xray from "x-ray";
+import findWorkspaceRoot from "find-yarn-workspace-root";
+import storesConfig from "./config.json";
+import filters from "./filters";
+import { Item, ScrapedItem, StoreConfig, StoreWithScrapedItems } from "./types";
+import { scrapeWebhallen } from "./webhallen";
 
-const { scrapeWebhallen } = require("./webhallen");
+const workspaceRoot = findWorkspaceRoot();
+const DATA_FOLDER = `${workspaceRoot}/data/`;
+const SRC_FOLDER = `${workspaceRoot}/app/src/`;
 
-const DATA_FOLDER = __dirname + "/../data/";
-const SRC_FOLDER = __dirname + "/../app/src/";
+const stores = storesConfig as StoreConfig[];
 
 const x = new Xray({ filters }).throttle(5, 100);
 
-const writeResultsToFile = (file, results) =>
+const writeResultsToFile = (file: string, results: any) =>
   jsonfile.writeFile(file, results, { spaces: 2 });
 
 function filterItems(item) {
@@ -101,32 +105,39 @@ const run = async () => {
 
   results.push(scrapeWebhallen(stores.find((s) => s.name === "Webhallen")));
 
-  const allResults = await Promise.all(results);
+  const allResults: StoreWithScrapedItems[] = await Promise.all(results);
 
   console.log("Merging all products");
-  const allItems = allResults.reduce((products, store) => {
+  const allItems = allResults.reduce((products: ScrapedItem[], store) => {
     if (!store.items) return products;
     return products.concat(store.items);
   }, []);
 
-  const itemsById = allItems.reduce((map, { name, image, ...rest }) => {
-    const id = name.toLowerCase().replace(/[\W_]+/g, "-");
+  type ItemsById = {
+    [itemId: string]: Item;
+  };
 
-    if (!map[id]) {
-      map[id] = {
-        stores: [],
-      };
-    }
-    if (!map[id].name) {
-      map[id].name = name;
-    }
-    if (!map[id].image) {
-      map[id].image = image;
-    }
-    map[id].stores.push(rest);
+  const itemsById: ItemsById = allItems.reduce(
+    (map, { name, image, ...rest }) => {
+      const id = name.toLowerCase().replace(/[\W_]+/g, "-");
 
-    return map;
-  }, {});
+      if (!map[id]) {
+        map[id] = {
+          stores: [],
+        };
+      }
+      if (!map[id].name) {
+        map[id].name = name;
+      }
+      if (!map[id].image) {
+        map[id].image = image;
+      }
+      map[id].stores.push(rest);
+
+      return map;
+    },
+    {}
+  );
 
   console.log(`Found ${Object.keys(itemsById).length} unique items`);
 
