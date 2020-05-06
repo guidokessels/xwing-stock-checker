@@ -36,13 +36,13 @@
       "stores": [
         {
           "price": 345,
-          "stock": 7,
+          "stock": 5,
           "url": "https://www.dragonslair.se/product/65840/star-wars-x-wing-second-edition",
           "store": "DL"
         },
         {
           "price": 350,
-          "stock": 9,
+          "stock": 7,
           "sku": "SWZ01",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88748-star-wars-x-wing-core-set-2nd-ed",
           "store": "AS"
@@ -50,7 +50,7 @@
         {
           "price": 539,
           "url": "https://www.sfbok.se/produkt/star-wars-x-wing-2nd-core-set-183780",
-          "stock": false,
+          "stock": true,
           "store": "SFBOK"
         },
         {
@@ -62,7 +62,7 @@
         {
           "price": 345,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -79,16 +79,10 @@
         },
         {
           "price": 190,
-          "stock": 7,
+          "stock": 4,
           "sku": "SWZ40",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/101168-star-wars-x-wing-naboo-royal-n-1-starfighter",
           "store": "AS"
-        },
-        {
-          "price": 220,
-          "url": "https://www.sfbok.se/produkt/naboo-royal-n-1-starfighter-193527",
-          "stock": true,
-          "store": "SFBOK"
         },
         {
           "price": 185,
@@ -99,7 +93,7 @@
         {
           "price": 189,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-naboo-royal-n-1-starfighter-expansion-pack-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -138,12 +132,6 @@
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-millennium-falcon-expansion-pack-exp",
           "stock": true,
           "store": "WOB"
-        },
-        {
-          "price": 349,
-          "url": "https://www.webhallen.com/se/product/298179",
-          "stock": 1,
-          "store": "WEB"
         },
         {
           "price": 349,
@@ -210,7 +198,7 @@
         {
           "price": 169,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-tie-ln-fighter-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -227,7 +215,7 @@
         },
         {
           "price": 190,
-          "stock": 10,
+          "stock": 7,
           "sku": "SWZ50",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/102990-star-wars-x-wing-inquisitors-tie-2nd-ed",
           "store": "AS"
@@ -284,7 +272,13 @@
         {
           "price": 249,
           "url": "https://www.webhallen.com/se/product/298185",
-          "stock": 5,
+          "stock": 4,
+          "store": "WEB"
+        },
+        {
+          "price": 249,
+          "url": "https://www.webhallen.com/se/product/298185",
+          "stock": 4,
           "store": "WEB"
         }
       ],
@@ -326,13 +320,13 @@
       "stores": [
         {
           "price": 195,
-          "stock": 6,
+          "stock": 5,
           "url": "https://www.dragonslair.se/product/73675/star-wars-x-wing-second-edition-major-vonregs-tie-expansion-pack",
           "store": "DL"
         },
         {
           "price": 180,
-          "stock": 11,
+          "stock": 6,
           "sku": "SWZ62",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/106863-star-wars-x-wing-major-vonregs-tie",
           "store": "AS"
@@ -383,13 +377,13 @@
         {
           "price": 449,
           "url": "https://www.webhallen.com/se/product/287368",
-          "stock": 34,
+          "stock": 32,
           "store": "WEB"
         },
         {
           "price": 449,
           "url": "https://www.webhallen.com/se/product/287368",
-          "stock": 34,
+          "stock": 32,
           "store": "WEB"
         }
       ],
@@ -406,7 +400,7 @@
         },
         {
           "price": 180,
-          "stock": 5,
+          "stock": 2,
           "sku": "SWZ59",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/106860-star-wars-x-wing-tiein-interceptor",
           "store": "AS"
@@ -498,7 +492,7 @@
           "store": "DL"
         },
         {
-          "price": 180,
+          "price": 195,
           "stock": 0,
           "sku": "SWZ66",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/106867-star-wars-x-wing-hotshots-and-aces",
@@ -544,7 +538,7 @@
         {
           "price": 179,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-rz-1-a-wing-expansion-pack-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -600,7 +594,7 @@
         {
           "price": 179,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-fireball-expansion-pack-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -647,8 +641,8 @@
           "store": "DL"
         },
         {
-          "price": 190,
-          "stock": 0,
+          "price": 195,
+          "stock": 4,
           "sku": "SWZ48",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/102989-star-wars-x-wing-btl-b-y-wing-2nd-ed",
           "store": "AS"
@@ -662,7 +656,7 @@
         {
           "price": 179,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-btl-b-y-wing-expansion-pack-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -679,7 +673,7 @@
         },
         {
           "price": 250,
-          "stock": 2,
+          "stock": 0,
           "sku": "SWZ57",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/106346-star-wars-x-wing-epic-battles-multiplayer-expansion",
           "store": "AS"
@@ -704,7 +698,7 @@
         },
         {
           "price": 190,
-          "stock": 6,
+          "stock": 4,
           "sku": "SWZ47",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/102991-star-wars-x-wing-nantex-class-starfighter-2nd-ed",
           "store": "AS"
@@ -718,7 +712,7 @@
         {
           "price": 179,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-nantex-class-starfighter-expansion-pack-exp",
-          "stock": true,
+          "stock": false,
           "store": "WOB"
         }
       ],
@@ -989,7 +983,7 @@
         },
         {
           "price": 190,
-          "stock": 8,
+          "stock": 14,
           "sku": "SWZ37",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98318-star-wars-x-wing-z-95-af4-headhunter",
           "store": "AS"
@@ -1026,7 +1020,7 @@
         },
         {
           "price": 190,
-          "stock": 0,
+          "stock": 4,
           "sku": "SWZ34",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98315-star-wars-x-wing-delta-7-aethersprite",
           "store": "AS"
@@ -1075,7 +1069,7 @@
         },
         {
           "price": 350,
-          "stock": 10,
+          "stock": 8,
           "sku": "SWZ32",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98313-star-wars-x-wing-guardians-of-the-republic-squadron-pack",
           "store": "AS"
@@ -1143,7 +1137,7 @@
         },
         {
           "price": 280,
-          "stock": 0,
+          "stock": 2,
           "sku": "SWZ53",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/106347-star-wars-x-wing-huge-ship-conversion-kit",
           "store": "AS"
@@ -1174,7 +1168,7 @@
         },
         {
           "price": 190,
-          "stock": 2,
+          "stock": 1,
           "sku": "SWZ41",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/101169-star-wars-x-wing-hyena-class-droid-bomber",
           "store": "AS"
@@ -1242,7 +1236,7 @@
         },
         {
           "price": 190,
-          "stock": 8,
+          "stock": 6,
           "sku": "SWZ31",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98312-star-wars-x-wing-vulture-class-droid-fighter",
           "store": "AS"
@@ -1279,7 +1273,7 @@
         },
         {
           "price": 275,
-          "stock": 2,
+          "stock": 0,
           "sku": "SWZ33",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98314-star-wars-x-wing-arc-170-starfighter-2nd-ed",
           "store": "AS"
@@ -1301,6 +1295,12 @@
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-arc-170-starfighter-expansion-pack-exp",
           "stock": false,
           "store": "WOB"
+        },
+        {
+          "price": 299,
+          "url": "https://www.webhallen.com/se/product/299691",
+          "stock": 0,
+          "store": "WEB"
         },
         {
           "price": 299,
@@ -1344,6 +1344,12 @@
           "url": "https://www.webhallen.com/se/product/294393",
           "stock": 0,
           "store": "WEB"
+        },
+        {
+          "price": 379,
+          "url": "https://www.webhallen.com/se/product/294393",
+          "stock": 0,
+          "store": "WEB"
         }
       ],
       "name": "Lando's Millennium Falcon",
@@ -1365,9 +1371,9 @@
           "store": "AS"
         },
         {
-          "price": 85,
+          "price": 99,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-rebel-alliance-maneuver-dial-upgrade-kit-exp",
-          "stock": false,
+          "stock": true,
           "store": "WOB"
         }
       ],
@@ -1465,7 +1471,7 @@
         },
         {
           "price": 190,
-          "stock": 16,
+          "stock": 14,
           "sku": "SWZ13",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88758-star-wars-x-wing-btl-a4-y-wing",
           "store": "AS"
@@ -1481,6 +1487,12 @@
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-btl-a4-y-wing-exp",
           "stock": true,
           "store": "WOB"
+        },
+        {
+          "price": 179,
+          "url": "https://www.webhallen.com/se/product/287373",
+          "stock": 0,
+          "store": "WEB"
         },
         {
           "price": 179,
@@ -1553,7 +1565,13 @@
         {
           "price": 179,
           "url": "https://www.webhallen.com/se/product/289818",
-          "stock": 2,
+          "stock": 1,
+          "store": "WEB"
+        },
+        {
+          "price": 179,
+          "url": "https://www.webhallen.com/se/product/289818",
+          "stock": 1,
           "store": "WEB"
         }
       ],
@@ -1570,7 +1588,7 @@
         },
         {
           "price": 495,
-          "stock": 0,
+          "stock": 1,
           "sku": "SWZ06",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88751-star-wars-x-wing-rebel-alliance-conversion-kit",
           "store": "AS"
@@ -1582,10 +1600,16 @@
           "store": "ESC"
         },
         {
-          "price": 429,
+          "price": 475,
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-rebel-alliance-conversion-kit-exp",
-          "stock": false,
+          "stock": true,
           "store": "WOB"
+        },
+        {
+          "price": 449,
+          "url": "https://www.webhallen.com/se/product/287366",
+          "stock": 2,
+          "store": "WEB"
         }
       ],
       "name": "Rebel Alliance Conversion Kit",
@@ -1669,7 +1693,7 @@
         },
         {
           "price": 190,
-          "stock": 8,
+          "stock": 19,
           "sku": "SWZ15",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88760-star-wars-x-wing-tie-advanced-x1",
           "store": "AS"
@@ -1683,7 +1707,7 @@
         {
           "price": 179,
           "url": "https://www.webhallen.com/se/product/287375",
-          "stock": 1,
+          "stock": 0,
           "store": "WEB"
         }
       ],
@@ -1700,7 +1724,7 @@
         },
         {
           "price": 190,
-          "stock": 5,
+          "stock": 11,
           "sku": "SWZ26",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/94352-star-wars-x-wing-tiefo-fighter",
           "store": "AS"
@@ -1722,12 +1746,6 @@
           "url": "https://www.webhallen.com/se/product/289782",
           "stock": 30,
           "store": "WEB"
-        },
-        {
-          "price": 179,
-          "url": "https://www.webhallen.com/se/product/289782",
-          "stock": 30,
-          "store": "WEB"
         }
       ],
       "name": "TIE/fo Fighter",
@@ -1743,7 +1761,7 @@
         },
         {
           "price": 190,
-          "stock": 8,
+          "stock": 19,
           "sku": "SWZ17",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88763-star-wars-x-wing-fang-fighter",
           "store": "AS"
@@ -1796,12 +1814,6 @@
           "url": "https://www.webhallen.com/se/product/289813",
           "stock": 5,
           "store": "WEB"
-        },
-        {
-          "price": 259,
-          "url": "https://www.webhallen.com/se/product/289813",
-          "stock": 5,
-          "store": "WEB"
         }
       ],
       "name": "First Order Conversion Kit",
@@ -1816,8 +1828,8 @@
           "store": "DL"
         },
         {
-          "price": 190,
-          "stock": 0,
+          "price": 195,
+          "stock": 6,
           "sku": "SWZ22",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/94349-star-wars-x-wing-rz-2-a-wing",
           "store": "AS"
@@ -1839,6 +1851,18 @@
           "url": "https://www.worldofboardgames.com/star-wars-x-wing-second-edition-rz-2-a-wing-exp",
           "stock": false,
           "store": "WOB"
+        },
+        {
+          "price": 179,
+          "url": "https://www.webhallen.com/se/product/289817",
+          "stock": 2,
+          "store": "WEB"
+        },
+        {
+          "price": 179,
+          "url": "https://www.webhallen.com/se/product/289817",
+          "stock": 2,
+          "store": "WEB"
         }
       ],
       "name": "RZ-2 A-Wing",
@@ -1854,7 +1878,7 @@
         },
         {
           "price": 350,
-          "stock": 5,
+          "stock": 3,
           "sku": "SWZ30",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/98311-star-wars-x-wing-sith-infiltrator",
           "store": "AS"
@@ -1882,6 +1906,12 @@
           "url": "https://www.webhallen.com/se/product/299688",
           "stock": 0,
           "store": "WEB"
+        },
+        {
+          "price": 329,
+          "url": "https://www.webhallen.com/se/product/299688",
+          "stock": 0,
+          "store": "WEB"
         }
       ],
       "name": "Sith Infiltrator",
@@ -1897,7 +1927,7 @@
         },
         {
           "price": 190,
-          "stock": 26,
+          "stock": 25,
           "sku": "SWZ12",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88757-star-wars-x-wing-t-65-x-wing",
           "store": "AS"
@@ -2007,12 +2037,6 @@
           "url": "https://www.webhallen.com/se/product/289815",
           "stock": 6,
           "store": "WEB"
-        },
-        {
-          "price": 89,
-          "url": "https://www.webhallen.com/se/product/289815",
-          "stock": 6,
-          "store": "WEB"
         }
       ],
       "name": "First Order Maneuver Dial Upgrade Kit",
@@ -2081,12 +2105,6 @@
           "url": "https://www.webhallen.com/se/product/289816",
           "stock": 9,
           "store": "WEB"
-        },
-        {
-          "price": 89,
-          "url": "https://www.webhallen.com/se/product/289816",
-          "stock": 9,
-          "store": "WEB"
         }
       ],
       "name": "Resistance Maneuver Dial Upgrade Kit",
@@ -2121,7 +2139,7 @@
       "stores": [
         {
           "price": 85,
-          "stock": 3,
+          "stock": 15,
           "sku": "SWZ05",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/88750-star-wars-x-wing-dice-pack-2nd-ed",
           "store": "AS"
@@ -2140,7 +2158,7 @@
       "stores": [
         {
           "price": 65,
-          "stock": 9,
+          "stock": 7,
           "sku": "SWZ73",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107836-star-wars-x-wing-galactic-empire-damage-deck",
           "store": "AS"
@@ -2149,24 +2167,11 @@
       "name": "Galactic Empire Damage Deck",
       "image": "https://alphaspel.se/media/products/9c061855-d887-41be-b9ec-30ac501daed3.300x300_q50_fill.png"
     },
-    "rebel-alliance-damage-deck": {
-      "stores": [
-        {
-          "price": 65,
-          "stock": 0,
-          "sku": "SWZ72",
-          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107837-star-wars-x-wing-rebel-alliance-damage-deck",
-          "store": "AS"
-        }
-      ],
-      "name": "Rebel Alliance Damage Deck",
-      "image": "https://alphaspel.se/media/products/58d48e64-39e6-42cf-8fa2-0fc1937f5563.300x300_q50_fill.png"
-    },
     "deluxe-movement-tools-and-range-ruler": {
       "stores": [
         {
           "price": 190,
-          "stock": 12,
+          "stock": 11,
           "sku": "SWZ46",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/101174-star-wars-x-wing-deluxe-movement-tools-and-range-ruler",
           "store": "AS"
@@ -2193,11 +2198,24 @@
       "name": "Deluxe Movement Tools and Range Ruler",
       "image": "https://alphaspel.se/media/products/e4262d4f-e6e8-4553-97d8-d5af4616f560.300x300_q50_fill.png"
     },
+    "galactic-republic-damage-deck": {
+      "stores": [
+        {
+          "price": 65,
+          "stock": 0,
+          "sku": "SWZ77",
+          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107834-star-wars-x-wing-galactic-republic-damage-deck",
+          "store": "AS"
+        }
+      ],
+      "name": "Galactic Republic Damage Deck",
+      "image": "https://alphaspel.se/media/products/0a3b5dfa-3235-4bb8-a46f-7ceb0e2138f0.300x300_q50_fill.png"
+    },
     "first-order-damage-deck": {
       "stores": [
         {
           "price": 65,
-          "stock": 2,
+          "stock": 0,
           "sku": "SWZ76",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107835-star-wars-x-wing-first-order-damage-deck",
           "store": "AS"
@@ -2210,7 +2228,7 @@
       "stores": [
         {
           "price": 65,
-          "stock": 2,
+          "stock": 1,
           "sku": "SWZ74",
           "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107839-star-wars-x-wing-scum-and-villainy-damage-deck",
           "store": "AS"
@@ -2232,18 +2250,31 @@
       "name": "Playmat Starfield",
       "image": "https://alphaspel.se/media/products/dbafa67c-69e2-4fc3-9514-e65f7c936c26.300x300_q50_fill.jpg"
     },
-    "galactic-republic-damage-deck": {
+    "rebel-alliance-damage-deck": {
+      "stores": [
+        {
+          "price": 65,
+          "stock": 0,
+          "sku": "SWZ72",
+          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107837-star-wars-x-wing-rebel-alliance-damage-deck",
+          "store": "AS"
+        }
+      ],
+      "name": "Rebel Alliance Damage Deck",
+      "image": "https://alphaspel.se/media/products/58d48e64-39e6-42cf-8fa2-0fc1937f5563.300x300_q50_fill.png"
+    },
+    "separatist-alliance-damage-deck": {
       "stores": [
         {
           "price": 65,
           "stock": 2,
-          "sku": "SWZ77",
-          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107834-star-wars-x-wing-galactic-republic-damage-deck",
+          "sku": "SWZ78",
+          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107840-star-wars-x-wing-separatist-alliance-damage-deck",
           "store": "AS"
         }
       ],
-      "name": "Galactic Republic Damage Deck",
-      "image": "https://alphaspel.se/media/products/0a3b5dfa-3235-4bb8-a46f-7ceb0e2138f0.300x300_q50_fill.png"
+      "name": "Separatist Alliance Damage Deck",
+      "image": "https://alphaspel.se/media/products/406f08c4-c474-4990-89f4-d9c1a64c88c0.300x300_q50_fill.png"
     },
     "tantive-iv": {
       "stores": [
@@ -2263,6 +2294,19 @@
       ],
       "name": "Tantive IV",
       "image": "https://alphaspel.se/media/products/001c6086-e00e-4e40-a556-84cfe9bb6eac.300x300_q50_fill.png"
+    },
+    "resistance-damage-deck": {
+      "stores": [
+        {
+          "price": 65,
+          "stock": 3,
+          "sku": "SWZ75",
+          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107838-star-wars-x-wing-resistance-damage-deck",
+          "store": "AS"
+        }
+      ],
+      "name": "Resistance Damage Deck",
+      "image": "https://alphaspel.se/media/products/d0736511-5eed-48c8-b325-d5d4c5648b2c.300x300_q50_fill.png"
     },
     "playmat-bespin": {
       "stores": [
@@ -2295,31 +2339,31 @@
         {
           "price": 799,
           "url": "https://www.webhallen.com/se/product/305901",
-          "stock": 4,
+          "stock": 2,
           "store": "WEB"
         },
         {
           "price": 799,
           "url": "https://www.webhallen.com/se/product/305901",
-          "stock": 4,
+          "stock": 2,
           "store": "WEB"
         }
       ],
       "name": "C-ROC Cruiser",
       "image": "https://alphaspel.se/media/products/a1cfb7a9-ceaa-4384-a953-b3a1eeaf00ea.300x300_q50_fill.png"
     },
-    "separatist-alliance-damage-deck": {
+    "xi-class-light-shuttle": {
       "stores": [
         {
-          "price": 65,
-          "stock": 3,
-          "sku": "SWZ78",
-          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107840-star-wars-x-wing-separatist-alliance-damage-deck",
+          "price": 250,
+          "stock": 0,
+          "sku": "SWZ69",
+          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/110630-star-wars-x-wing-xi-class-light-shuttle",
           "store": "AS"
         }
       ],
-      "name": "Separatist Alliance Damage Deck",
-      "image": "https://alphaspel.se/media/products/406f08c4-c474-4990-89f4-d9c1a64c88c0.300x300_q50_fill.png"
+      "name": "Xi-class Light Shuttle",
+      "image": "https://alphaspel.se/media/products/6cc278b2-756d-4d0c-9f2c-5333f89a4017.300x300_q50_fill.png"
     },
     "hmp-droid-gunship": {
       "stores": [
@@ -2346,32 +2390,6 @@
       ],
       "name": "LAAT/i Gunship",
       "image": "https://alphaspel.se/media/products/178bd3fa-e0ef-4213-866c-5ae4fb642656.300x300_q50_fill.png"
-    },
-    "resistance-damage-deck": {
-      "stores": [
-        {
-          "price": 65,
-          "stock": 5,
-          "sku": "SWZ75",
-          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/107838-star-wars-x-wing-resistance-damage-deck",
-          "store": "AS"
-        }
-      ],
-      "name": "Resistance Damage Deck",
-      "image": "https://alphaspel.se/media/products/d0736511-5eed-48c8-b325-d5d4c5648b2c.300x300_q50_fill.png"
-    },
-    "xi-class-light-shuttle": {
-      "stores": [
-        {
-          "price": 250,
-          "stock": 0,
-          "sku": "SWZ69",
-          "url": "https://alphaspel.se/1479-star-wars-x-wing-miniatures/110630-star-wars-x-wing-xi-class-light-shuttle",
-          "store": "AS"
-        }
-      ],
-      "name": "Xi-class Light Shuttle",
-      "image": "https://alphaspel.se/media/products/6cc278b2-756d-4d0c-9f2c-5333f89a4017.300x300_q50_fill.png"
     },
     "imperial-raider": {
       "stores": [
