@@ -33,6 +33,22 @@
     "file": "as.json"
   },
   {
+    "name": "Spelexperten",
+    "id": "SE",
+    "url": "https://www.spelexperten.com/cgi-bin/ibutik/AIR_ibutik.fcgi?funk=gor_sokning&AvanceradSokning=N&artnr=&varum=&artgrp=&Sprak_Suffix=SV&term=SWZ",
+    "openProductPage": true,
+    "selectors": {
+      "item": ".PT_Wrapper_All > div",
+      "itemName": "#ArtikelnamnFalt | whitespace | fixTitle",
+      "itemPrice": "[itemprop=\"price\"]@content |  price | whitespace | toNum",
+      "itemUrl": ".PT_Lank@href",
+      "itemImage": "[itemprop=\"price\"]@src",
+      "stock": "#Lagerstatus | whitespace | sestock",
+      "sku": "#ArtnrFalt | whitespace | sku"
+    },
+    "file": "se.json"
+  },
+  {
     "name": "SF Bokhandeln",
     "id": "SFBOK",
     "url": "https://www.sfbok.se/stora-spelforlag/fantasy-flight-games/star-wars-x-wing-2nd-edition",
