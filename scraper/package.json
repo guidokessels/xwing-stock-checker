@@ -5,11 +5,13 @@
   "author": "Guido Kessels <guidokessels@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "scrape": "node index.js"
+    "scrape": "tsc && node dist/index.js"
   },
   "dependencies": {
+    "find-yarn-workspace-root": "^1.2.1",
     "jsonfile": "^6.0.1",
     "node-fetch": "^2.6.1",
+    "typescript": "~3.7.2",
     "x-ray": "^2.3.4"
   }
 }

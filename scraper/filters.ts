@@ -1,27 +1,27 @@
-module.exports = {
-  whitespace: value => {
+export default {
+  whitespace: (value: string) => {
     return value.replace(/\\n/g, "").trim();
   },
-  price: value => {
+  price: (value: string) => {
     return value.replace(/(sek|kr)/, "");
   },
-  toNum: value => parseInt(value),
-  dlstock: value => {
+  toNum: (value: string) => parseInt(value),
+  dlstock: (value: string) => {
     const matches = value.match(/\d+/g);
     return matches.reduce((a, b) => a + parseInt(b, 10), 0);
   },
-  sfbstock: value => value === "Köp",
-  wobstock: value => value === "K�p",
-  escapadestock: value => value === "I lager",
-  asstock: value => parseInt(value, 10) || 0,
-  sku: value => {
+  sfbstock: (value: string) => value === "Köp",
+  wobstock: (value: string) => value === "K�p",
+  escapadestock: (value: string) => value === "I lager",
+  asstock: (value: string) => parseInt(value, 10) || 0,
+  sku: (value: string) => {
     const matches = value.match(/SW[X|Z]\d+/);
     if (matches) {
       return matches[0];
     }
     return null;
   },
-  fixTitle: value => {
+  fixTitle: (value: string) => {
     const original = value;
 
     // Look at all the things! Hack hack hackety hack
@@ -120,5 +120,5 @@ module.exports = {
     }
 
     return value;
-  }
+  },
 };
