@@ -27,6 +27,7 @@ export default {
     // Look at all the things! Hack hack hackety hack
     value = value.replace("X-Wing 2nd Edition:", "");
     value = value.replace("X-Wing (2nd Ed):", "");
+    value = value.replace("X-WING (2nd Ed):", "");
     value = value.replace("Star Wars: X-Wing (Second Edition) -", "");
     value = value.replace("Star Wars: X-Wing Miniatures Game -", "");
     value = value.replace("Star Wars: X-Wing Second Edition -", "");
