@@ -13,6 +13,7 @@ export default {
   sfbstock: (value: string) => value === "Köp",
   wobstock: (value: string) => value === "K�p",
   escapadestock: (value: string) => value === "I lager",
+  sestock: (value: string) => value === "I lager",
   asstock: (value: string) => parseInt(value, 10) || 0,
   sku: (value: string) => {
     const matches = value.match(/SW[X|Z]\d+/);
@@ -25,26 +26,31 @@ export default {
     const original = value;
 
     // Look at all the things! Hack hack hackety hack
+    value = value.replace(/–/g, "-");
     value = value.replace("X-Wing 2nd Edition:", "");
     value = value.replace("X-Wing (2nd Ed):", "");
     value = value.replace("X-WING (2nd Ed):", "");
     value = value.replace("Star Wars: X-Wing (Second Edition) -", "");
     value = value.replace("Star Wars: X-Wing Miniatures Game -", "");
     value = value.replace("Star Wars: X-Wing Second Edition -", "");
+    value = value.replace(/Star Wars: X-Wing \(2nd Ed\.?\) -/, "");
     value = value.replace("(Second Edition):", "");
     value = value.replace("Second Edition", "");
     value = value.replace("T-70 Expansion Pack", "T-70 X-Wing");
     value = value.replace("Expansion Pack", "");
-    value = value.replace("(Exp.)", "");
+    value = value.replace(/\(Exp\.?\)/, "");
     value = value.replace("Star Wars X-Wing:", "");
     value = value.replace("Star Wars X-Wing", "");
     value = value.replace("Star Wars: X-Wing -", "");
     value = value.replace("Star Wars: X-Wing", "");
+    value = value.replace("Star Wars X-Wing -", "");
     value = value.replace("Expansion Pack", "");
     value = value.replace(/Expansion/i, "");
     value = value.replace("Exp.", "");
-    value = value.replace("(2nd ed)", "");
+    value = value.replace(/\(2nd( ed)?\)[ -]?/i, "");
+    value = value.replace(/2nd ed[\.:]?[ -]?/i, "");
     value = value.replace("2nd Ed -", "");
+    value = value.replace("2nd Ed:", "");
     value = value.replace("(1st ed)", "(1st Edition)");
     value = value.replace("’", "'");
     value = value.replace("(Skrymmande)", "");
@@ -62,6 +68,7 @@ export default {
     value = value.replace("Scum & Villainy", "Scum And Villainy");
     value = value.replace("Scum and Villainy", "Scum And Villainy");
     value = value.replace(/pre[ -]?order/i, "");
+    value = value.replace(/^ ?-?/, "");
 
     if (
       value.endsWith("Servants of Strife") ||

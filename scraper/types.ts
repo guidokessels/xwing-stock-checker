@@ -1,4 +1,4 @@
-export type StoreCode = "DL" | "AS" | "SFBOK" | "ESC" | "WOB";
+export type StoreCode = "DL" | "AS" | "SFBOK" | "ESC" | "WOB" | "SE";
 
 export type StoreConfig = {
   name: string;
