@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xwing-stock-checker/precache-manifest.3717ff2b64541b7ec30d3188df07daf6.js"
+  "/xwing-stock-checker/precache-manifest.2f59e708e18722609936b675f94e1ffa.js"
 );
 
 self.addEventListener('message', (event) => {
