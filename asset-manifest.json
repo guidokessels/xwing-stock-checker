@@ -1,22 +1,22 @@
 {
   "files": {
-    "data.js": "/xwing-stock-checker/static/js/data.52158193.chunk.js",
-    "data.js.map": "/xwing-stock-checker/static/js/data.52158193.chunk.js.map",
+    "data.js": "/xwing-stock-checker/static/js/data.aa30c056.chunk.js",
+    "data.js.map": "/xwing-stock-checker/static/js/data.aa30c056.chunk.js.map",
     "main.css": "/xwing-stock-checker/static/css/main.8dca8b45.chunk.css",
     "main.js": "/xwing-stock-checker/static/js/main.61c9576f.chunk.js",
     "main.js.map": "/xwing-stock-checker/static/js/main.61c9576f.chunk.js.map",
-    "runtime-main.js": "/xwing-stock-checker/static/js/runtime-main.5df0a265.js",
-    "runtime-main.js.map": "/xwing-stock-checker/static/js/runtime-main.5df0a265.js.map",
+    "runtime-main.js": "/xwing-stock-checker/static/js/runtime-main.cc585176.js",
+    "runtime-main.js.map": "/xwing-stock-checker/static/js/runtime-main.cc585176.js.map",
     "static/js/3.24f2f8b9.chunk.js": "/xwing-stock-checker/static/js/3.24f2f8b9.chunk.js",
     "static/js/3.24f2f8b9.chunk.js.map": "/xwing-stock-checker/static/js/3.24f2f8b9.chunk.js.map",
     "index.html": "/xwing-stock-checker/index.html",
-    "precache-manifest.ce7b17f6f3fba93783cb6c6b224a1f22.js": "/xwing-stock-checker/precache-manifest.ce7b17f6f3fba93783cb6c6b224a1f22.js",
+    "precache-manifest.fe89d82c891a7a9beb5de1ebefabb5e4.js": "/xwing-stock-checker/precache-manifest.fe89d82c891a7a9beb5de1ebefabb5e4.js",
     "service-worker.js": "/xwing-stock-checker/service-worker.js",
     "static/css/main.8dca8b45.chunk.css.map": "/xwing-stock-checker/static/css/main.8dca8b45.chunk.css.map",
     "static/js/3.24f2f8b9.chunk.js.LICENSE.txt": "/xwing-stock-checker/static/js/3.24f2f8b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5df0a265.js",
+    "static/js/runtime-main.cc585176.js",
     "static/js/3.24f2f8b9.chunk.js",
     "static/css/main.8dca8b45.chunk.css",
     "static/js/main.61c9576f.chunk.js"
